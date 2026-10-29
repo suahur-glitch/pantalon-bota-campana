@@ -9,8 +9,12 @@ Desde esta carpeta (Node 18 o superior, sin `npm install`):
 
 Y abre http://localhost:3000. `server.js` sirve los estáticos sin dependencias, escucha en `process.env.PORT` (3000 si no está definido) y soporta peticiones Range para el video.
 
-En Hostinger (app Node.js): sube la carpeta completa con `package.json` en la raíz; el comando de inicio es `npm start` (archivo de entrada `server.js`).
-También funciona subiendo la carpeta a cualquier hosting estático, sin `server.js`.
+## Publicación
+- En vivo: https://pantalonbotacampana.kosmikamedia.com (app Node.js de Hostinger, archivo de entrada `server.js`).
+- Repositorio: https://github.com/suahur-glitch/pantalon-bota-campana. Hostinger redespliega automáticamente con cada push a `main`.
+- Para publicar un cambio: `git add -A`, `git commit -m "..."`, `git push`.
+
+También funciona subiendo la carpeta a cualquier hosting estático, sin `server.js` (el `.htaccess` bloquea los archivos que no deben verse).
 
 ## Archivos
 - `index.html`: estructura y textos de las secciones.
