@@ -1,0 +1,8 @@
+# Hostinger (Apache/LiteSpeed) cuando la carpeta se sirve como estáticos,
+# p. ej. kosmikamedia.com/Pantalonbotacampana. Node no se usa en ese caso.
+DirectoryIndex index.html
+Options -Indexes
+
+# No exponer archivos del repositorio ni del servidor Node
+RedirectMatch 404 /\.(git|claude)(/|$)
+RedirectMatch 404 /(server\.js|package\.json|README\.md|\.gitignore)$

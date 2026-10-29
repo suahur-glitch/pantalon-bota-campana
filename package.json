@@ -1,0 +1,13 @@
+{
+  "name": "kosmika-landing-pantalon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing Kosmika · pantalón bota campana (estáticos servidos con Node, sin dependencias)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
