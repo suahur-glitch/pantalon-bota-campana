@@ -50,11 +50,11 @@ body{margin:0;background:#F7EEE4;color:#1A1A1A;font-family:'Inter',system-ui,-ap
 .hero-copy .price-line{margin-top:10px;font-size:14px;font-weight:700;letter-spacing:.03em;line-height:1.4;color:var(--ink)}
 .hero-copy .btn{margin-top:18px;width:min(100%,360px)}
 /* botón principal del inicio: rojo carmesí, más grande y con pulso suave */
-.btn-promo{min-height:64px;padding:0 34px;background:#E60023;color:#fff;font-size:19px;animation:pulso 2s ease-in-out infinite}
+.btn-promo{min-height:60px;padding:0 30px;background:#E60023;color:#fff;font-size:18px;animation:pulso 2s ease-in-out infinite}
 .btn-promo b{font-weight:800;letter-spacing:.02em}
-.btn-promo small{font-size:13px;opacity:.9}
+.btn-promo small{font-size:12px;opacity:.9}
 .btn-promo:hover{background:#C4001D}
-.hero-copy .btn-promo{width:min(100%,400px)}
+.hero-copy .btn-promo,.sec-cta .btn-promo{width:min(100%,380px)}
 @keyframes pulso{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(230,0,35,.45)}50%{transform:scale(1.04);box-shadow:0 0 0 12px rgba(230,0,35,0)}}
 .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 
