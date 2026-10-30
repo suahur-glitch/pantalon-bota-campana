@@ -7,7 +7,7 @@
 <meta name="description" content="Pantalón bota campana en licra elástica, de tiro alto. Envío gratis y pago contra entrega.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <div class="kk v-a">
@@ -17,9 +17,7 @@
 
 <header class="nav">
   <a href="#inicio" class="seal" aria-label="Kosmika, inicio">
-    <!-- Reemplaza este círculo punteado por el logo de Kosmika (PNG/SVG) -->
-    <span class="seal-box" aria-hidden="true">Logo</span>
-    <span class="seal-name">Kosmika</span>
+    <img class="logo" src="assets/logo-kosmika.jpg" width="500" height="500" alt="Kosmika · Tienda virtual">
   </a>
   <nav class="nav-links" aria-label="Principal">
     <a href="#coleccion">Colección</a>
@@ -31,27 +29,41 @@
 
 <main id="inicio">
 
-<!-- HERO A: video de fondo -->
+<!-- HERO: título, video + carrusel, textos y compra -->
 <section class="hero" aria-labelledby="hero-h">
-  <div class="hero-media">
-    <img class="hero-still" src="assets/hero-poster.jpg" alt="Modelo de cuerpo completo con pantalón bota campana negro de tiro alto">
-    <video class="hero-video" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
-    <div class="hero-veil"></div>
-  </div>
-  <div class="hero-copy">
-    <h1 id="hero-h" class="rv">Tu silueta, <span class="mark">a otro nivel.</span></h1>
-    <p class="sub rv d1">Bota campana en licra elástica, de tiro alto, que estiliza y se mueve contigo. Pagas cuando lo recibes.</p>
-    <p class="price-line rv d1">2 unidades al precio de 1 · $109.900</p>
-    <a href="#paquetes" class="btn rv d2">Elige tu pantalón</a>
-    <div class="badges rv d3">
-      <span class="badge"><svg viewBox="0 0 16 16" fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Envío gratis</span>
-      <span class="badge"><svg viewBox="0 0 16 16" fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Pago contra entrega</span>
-      <span class="badge"><svg viewBox="0 0 16 16" fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Garantía de 30 días</span>
+  <div class="wrap">
+    <h1 id="hero-h" class="hero-h">Estiliza tu silueta con nuestro <span class="mark">pantalón bota campana.</span></h1>
+    <div class="hero-grid">
+      <div class="hero-media">
+        <img class="hero-still" src="assets/hero-poster.jpg" alt="Modelo de cuerpo completo con pantalón bota campana negro de tiro alto">
+        <video class="hero-video" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
+      </div>
+      <!-- Carrusel: las fotos se cambian aquí; los puntos y flechas los arma app.js -->
+      <div class="car" aria-roledescription="carrusel" aria-label="Fotos del pantalón bota campana">
+        <div class="car-track" id="car-track">
+          <figure><img src="assets/car-negro.jpg" width="1254" height="1254" alt="Pantalón bota campana negro, vista de frente y de espaldas con top blanco"></figure>
+          <figure><img src="assets/car-verde.jpg" width="1254" height="1254" loading="lazy" alt="Pantalón bota campana verde oliva, vista de frente y de espaldas con top blanco"></figure>
+          <figure><img src="assets/car-azul.jpg" width="1254" height="1254" loading="lazy" alt="Pantalón bota campana azul oscuro de tiro alto, detalle de la pretina y la caída"></figure>
+          <figure><img src="assets/car-gris.jpg" width="1254" height="1254" loading="lazy" alt="Pantalón bota campana gris oscuro con top crema, caminando por la calle"></figure>
+          <figure><img src="assets/car-rojo.jpg" width="1080" height="1080" loading="lazy" alt="Pantalón bota campana rojo con top blanco y tenis blancos"></figure>
+        </div>
+        <button type="button" class="car-btn car-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="car-btn car-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="car-dots" id="car-dots"></div>
+      </div>
+    </div>
+    <div class="hero-copy">
+      <p class="sub">Bota campana en licra elástica, de tiro alto, que estiliza y se mueve contigo. Pagas cuando lo recibes.</p>
+      <p class="price-line">2 unidades al precio de 1 · $109.900</p>
+      <button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button>
+      <div class="badges">
+        <span class="badge"><svg viewBox="0 0 16 16" fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Envío gratis</span>
+        <span class="badge"><svg viewBox="0 0 16 16" fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Pago contra entrega</span>
+        <span class="badge"><svg viewBox="0 0 16 16" fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8"/></svg>Garantía de 30 días</span>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- HERO B: titular + carrusel de producto + precio -->
 
 <!-- PROBLEMA -->
 <section class="sec" aria-label="El problema">
@@ -62,6 +74,7 @@
       <p class="rv d1">Casi siempre toca elegir una cosa o la otra.</p>
       <p class="rv d2">Y comprar por internet, a veces, da más dudas que ganas.</p>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -93,6 +106,7 @@
       <figure role="listitem"><img src="assets/negro-espalda.jpg" width="800" height="1000" loading="lazy" alt="Modelo de espaldas con el pantalón bota campana negro de tiro alto"></figure>
       <figure role="listitem"><img src="assets/negro-frente.jpg" width="800" height="1000" loading="lazy" alt="Modelo de frente con el pantalón bota campana negro y top blanco"></figure>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -114,6 +128,7 @@
         </ul>
       </div>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -138,6 +153,7 @@
         <p>Si se transparenta o no te estiliza como esperabas, te devolvemos tu dinero.</p>
       </div>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -169,6 +185,7 @@
       </div>
     </div>
     <p class="tip rv"><b>Consejo:</b> algunas de nuestras clientas recomiendan usar ropa interior sin costuras para mayor discreción.</p>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -180,6 +197,7 @@
       <figure class="ba-f"><img src="assets/antes.webp?v=2" width="1122" height="1402" loading="lazy" alt="Antes: clienta frente al espejo con pantalón negro recto y camiseta gris"><figcaption>Antes</figcaption></figure>
       <figure class="ba-f"><img src="assets/despues.webp?v=2" width="1122" height="1402" loading="lazy" alt="Después: la misma clienta frente al espejo con el pantalón negro de bota campana y camiseta gris"><figcaption>Después</figcaption></figure>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -193,6 +211,7 @@
       <div class="card rv d1"><h3>Fibras suaves al tacto</h3></div>
       <div class="card rv d2"><h3>Color profundo que dura</h3></div>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -211,6 +230,7 @@
         </tbody>
       </table>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -236,6 +256,7 @@
         <cite>Daniela P., Cali</cite>
       </blockquote>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -261,6 +282,7 @@
         <p>Conserva su elasticidad y su textura lisa lavado tras lavado. Te recomendamos lavarlo en ciclo suave.</p>
       </details>
     </div>
+    <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
 </section>
 
@@ -297,11 +319,8 @@
     <div class="foot-in">
       <div>
         <a href="#inicio" class="seal" aria-label="Kosmika, inicio">
-          <!-- Reemplaza por el logo de Kosmika -->
-          <span class="seal-box" aria-hidden="true">Logo</span>
-          <span class="seal-name">Kosmika</span>
+          <img class="logo logo-lg" src="assets/logo-kosmika.jpg" width="500" height="500" loading="lazy" alt="Kosmika · Tienda virtual">
         </a>
-        <p style="margin-top:8px;font-size:14px;color:var(--mut)">Tienda virtual</p>
       </div>
       <nav class="foot-links" aria-label="Pie de página">
         <a href="#paquetes">Cómo comprar</a>
@@ -329,6 +348,6 @@
 <div id="modal-root"></div>
 
 </div>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

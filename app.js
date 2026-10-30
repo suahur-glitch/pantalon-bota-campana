@@ -223,7 +223,7 @@ function initReveal() {
   document.documentElement.classList.add('js-rv');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 10% 0px' }); // aparece justo antes de entrar en pantalla
   $$('.rv').forEach(function (el) { io.observe(el); });
 }
 
@@ -256,6 +256,36 @@ function initVideo() {
   if (pl && pl.catch) pl.catch(still);
 }
 
+// Carrusel del inicio: deslizar con el dedo, flechas, puntos y avance automático cada 4 s
+function initCarousel() {
+  var track = $('#car-track'), dots = $('#car-dots');
+  if (!track || !dots) return;
+  var slides = track.children, n = slides.length, cur = 0, timer = null;
+  dots.innerHTML = Array.prototype.map.call(slides, function (s, i) {
+    return '<button type="button" aria-label="Ver foto ' + (i + 1) + ' de ' + n + '"></button>';
+  }).join('');
+  function go(i) { cur = (i + n) % n; track.scrollTo({ left: cur * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' }); }
+  function mark() {
+    cur = Math.round(track.scrollLeft / (track.clientWidth || 1));
+    Array.prototype.forEach.call(dots.children, function (d, i) { d.setAttribute('aria-current', i === cur ? 'true' : 'false'); });
+  }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function start() { stop(); if (!reduce) timer = setInterval(function () { go(cur + 1); }, 4000); }
+  track.addEventListener('scroll', function () { requestAnimationFrame(mark); }, { passive: true });
+  dots.addEventListener('click', function (ev) {
+    var b = ev.target.closest('button'); if (!b) return;
+    go(Array.prototype.indexOf.call(dots.children, b)); start();
+  });
+  $('.car-prev').addEventListener('click', function () { go(cur - 1); start(); });
+  $('.car-next').addEventListener('click', function () { go(cur + 1); start(); });
+  track.addEventListener('pointerdown', stop);
+  track.addEventListener('touchstart', stop, { passive: true });
+  track.addEventListener('touchend', start, { passive: true });
+  document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else start(); });
+  mark();
+  start();
+}
+
 function initScroll() {
   var queued = false;
   function run() {
@@ -284,4 +314,5 @@ $('#wa-float').href = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponen
 renderPacks();
 initReveal();
 initVideo();
+initCarousel();
 initScroll();
