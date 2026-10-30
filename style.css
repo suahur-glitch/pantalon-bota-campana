@@ -51,7 +51,9 @@ body{margin:0;background:#F7EEE4;color:#1A1A1A;font-family:'Inter',system-ui,-ap
 .hero-copy .btn{margin-top:18px;width:min(100%,360px)}
 /* botón principal del inicio: rojo carmesí, más grande y con pulso suave */
 .btn-promo{min-height:60px;padding:0 30px;background:#E60023;color:#fff;font-size:18px;animation:pulso 2s ease-in-out infinite}
-.btn-promo b{font-weight:800;letter-spacing:.02em}
+.btn-promo b{font-weight:800;letter-spacing:.02em;white-space:nowrap}
+@media (max-width:420px){.btn-promo{padding:0 12px;font-size:16px}.btn-promo b{letter-spacing:0}}
+@media (max-width:350px){.btn-promo{padding:0 8px;font-size:14px}}
 .btn-promo small{font-size:12px;opacity:.9}
 .btn-promo:hover{background:#C4001D}
 .hero-copy .btn-promo,.sec-cta .btn-promo{width:min(100%,380px)}
