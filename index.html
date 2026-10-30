@@ -7,7 +7,7 @@
 <meta name="description" content="Pantalón bota campana en licra elástica, de tiro alto. Envío gratis y pago contra entrega.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <div class="kk v-a">
@@ -34,10 +34,6 @@
   <div class="wrap">
     <h1 id="hero-h" class="hero-h">Estiliza tu silueta con nuestro <span class="mark">pantalón bota campana.</span></h1>
     <div class="hero-grid">
-      <div class="hero-media">
-        <img class="hero-still" src="assets/hero-poster.jpg" alt="Modelo de cuerpo completo con pantalón bota campana negro de tiro alto">
-        <video class="hero-video" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
-      </div>
       <!-- Carrusel: las fotos se cambian aquí; los puntos y flechas los arma app.js -->
       <div class="car" aria-roledescription="carrusel" aria-label="Fotos del pantalón bota campana">
         <div class="car-track" id="car-track">
@@ -50,6 +46,10 @@
         <button type="button" class="car-btn car-prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button type="button" class="car-btn car-next" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
         <div class="car-dots" id="car-dots"></div>
+      </div>
+      <div class="hero-media">
+        <img class="hero-still" src="assets/hero-poster.jpg" alt="Modelo de cuerpo completo con pantalón bota campana negro de tiro alto">
+        <video class="hero-video" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
       </div>
     </div>
     <div class="hero-copy">
@@ -84,27 +84,30 @@
     <p class="kicker rv">La colección</p>
     <h2 id="sol-h" class="h2 rv" style="margin-top:14px;max-width:16ch">Una bota campana <span class="mark">pensada para ti.</span></h2>
     <div class="ben">
-      <div class="rv">
-        <div class="ben-n">01</div>
-        <h3>Estiliza tu silueta</h3>
-        <p>El tiro alto define tu cintura y el vuelo desde la rodilla alarga la pierna.</p>
+      <div class="ben-i rv">
+        <img src="assets/rojo.jpg" width="800" height="1000" loading="lazy" alt="Modelo de cuerpo completo con el pantalón bota campana rojo y top blanco">
+        <div>
+          <div class="ben-n">01</div>
+          <h3>Estiliza tu silueta</h3>
+          <p>El tiro alto define tu cintura y el vuelo desde la rodilla alarga la pierna.</p>
+        </div>
       </div>
-      <div class="rv d1">
-        <div class="ben-n">02</div>
-        <h3>Cómodo todo el día</h3>
-        <p>Licra elástica de alta calidad que se adapta a ti y se mueve contigo.</p>
+      <div class="ben-i rv d1">
+        <img src="assets/azul.jpg" width="1000" height="1000" loading="lazy" alt="Pantalón bota campana azul oscuro, vista de la caída desde la cadera">
+        <div>
+          <div class="ben-n">02</div>
+          <h3>Cómodo todo el día</h3>
+          <p>Licra elástica de alta calidad que se adapta a ti y se mueve contigo.</p>
+        </div>
       </div>
-      <div class="rv d2">
-        <div class="ben-n">03</div>
-        <h3>Se combina con todo</h3>
-        <p>Con top, camiseta, chaqueta, tenis o zapatos más arreglados.</p>
+      <div class="ben-i rv d2">
+        <img src="assets/negro-espalda.jpg" width="800" height="1000" loading="lazy" alt="Modelo de espaldas con el pantalón bota campana negro de tiro alto">
+        <div>
+          <div class="ben-n">03</div>
+          <h3>Se combina con todo</h3>
+          <p>Con top, camiseta, chaqueta, tenis o zapatos más arreglados.</p>
+        </div>
       </div>
-    </div>
-    <div class="gal" role="list" aria-label="Galería de la colección">
-      <figure role="listitem"><img src="assets/rojo.jpg" width="800" height="1000" loading="lazy" alt="Modelo de cuerpo completo con el pantalón bota campana rojo y top blanco"></figure>
-      <figure role="listitem"><img src="assets/azul.jpg" width="1000" height="1000" loading="lazy" alt="Pantalón bota campana azul oscuro, vista de la caída desde la cadera"></figure>
-      <figure role="listitem"><img src="assets/negro-espalda.jpg" width="800" height="1000" loading="lazy" alt="Modelo de espaldas con el pantalón bota campana negro de tiro alto"></figure>
-      <figure role="listitem"><img src="assets/negro-frente.jpg" width="800" height="1000" loading="lazy" alt="Modelo de frente con el pantalón bota campana negro y top blanco"></figure>
     </div>
     <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
@@ -160,29 +163,11 @@
 <!-- CÓMO USARLO -->
 <section class="sec" aria-labelledby="uso-h">
   <div class="wrap">
-    <h2 id="uso-h" class="h2 rv" style="max-width:18ch">Arma tu look <span class="mark">en 3 pasos</span></h2>
-    <div class="steps">
-      <div class="step rv">
-        <div class="step-n">1</div>
-        <div>
-          <h3>Acomoda la pretina</h3>
-          <p>Sube la pretina hasta acomodarla suavemente sobre tu cintura natural.</p>
-        </div>
-      </div>
-      <div class="step rv d1">
-        <div class="step-n">2</div>
-        <div>
-          <h3>Elige tu calzado</h3>
-          <p>Tenis cómodos para el día o botines para salir.</p>
-        </div>
-      </div>
-      <div class="step rv d2">
-        <div class="step-n">3</div>
-        <div>
-          <h3>Completa y sal</h3>
-          <p>Con tu camiseta básica o chaqueta ligera favorita.</p>
-        </div>
-      </div>
+    <h2 id="uso-h" class="h2 rv" style="max-width:18ch">Arma tu look <span class="mark">como quieras</span></h2>
+    <div class="looks" role="list" aria-label="Looks del día a día">
+      <figure class="rv" role="listitem"><img src="assets/look-oficina.webp" width="1122" height="1402" loading="lazy" alt="Mujer en la oficina con pantalón bota campana rojo, blazer beige, camisa blanca y tacones"><figcaption>En la oficina</figcaption></figure>
+      <figure class="rv d1" role="listitem"><img src="assets/look-ciudad.webp" width="1122" height="1402" loading="lazy" alt="Mujer caminando por la ciudad con pantalón bota campana verde oliva, top crema y tenis blancos"><figcaption>De paseo por la ciudad</figcaption></figure>
+      <figure class="rv d2" role="listitem"><img src="assets/look-cafe.webp" width="1122" height="1402" loading="lazy" alt="Mujer en una cafetería con pantalón bota campana azul oscuro, saco tejido y tenis blancos"><figcaption>Un café con amigas</figcaption></figure>
     </div>
     <p class="tip rv"><b>Consejo:</b> algunas de nuestras clientas recomiendan usar ropa interior sin costuras para mayor discreción.</p>
     <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
@@ -204,12 +189,17 @@
 <!-- MATERIALES -->
 <section class="sec" aria-labelledby="mat-h">
   <div class="wrap">
-    <h2 id="mat-h" class="h2 rv" style="max-width:18ch">Tejidos pensados <span class="mark">para durar</span></h2>
-    <p class="lead rv d1">Un tejido de punto denso, con elasticidad en dos direcciones: se estira contigo y recupera su forma sin deformar la campana.</p>
-    <div class="mat">
-      <div class="card rv"><h3>Licra elástica de alta densidad</h3></div>
-      <div class="card rv d1"><h3>Fibras suaves al tacto</h3></div>
-      <div class="card rv d2"><h3>Color profundo que dura</h3></div>
+    <div class="mat-in">
+      <figure class="mat-img rv"><img src="assets/tela-elastica.webp" width="1122" height="1402" loading="lazy" alt="Manos estirando la licra del pantalón bota campana verde oliva, que recupera su forma"></figure>
+      <div>
+        <h2 id="mat-h" class="h2 rv" style="max-width:18ch">Tejidos pensados <span class="mark">para durar</span></h2>
+        <p class="lead rv d1">Un tejido de punto denso, con elasticidad en dos direcciones: se estira contigo y recupera su forma sin deformar la campana.</p>
+        <div class="mat">
+          <div class="card rv"><h3>Licra elástica de alta densidad</h3></div>
+          <div class="card rv d1"><h3>Fibras suaves al tacto</h3></div>
+          <div class="card rv d2"><h3>Color profundo que dura</h3></div>
+        </div>
+      </div>
     </div>
     <div class="sec-cta"><button type="button" class="btn" data-open>Comprar ahora<small>Pago contraentrega</small></button></div>
   </div>
